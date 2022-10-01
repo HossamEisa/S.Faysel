@@ -1,0 +1,54 @@
+.overlay-card {
+    --img-height: 200px;
+    min-height: var(--img-height);
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        min-height: var(--img-height);
+    }
+
+    .card-img-overlay {
+        background: rgb(23, 28, 25);
+        background: linear-gradient(180deg, rgba(23, 28, 25, 0) 0%, rgba(23, 28, 25, 1) 94%);
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: calcRem(15);
+
+        @include mq('xl') {
+            padding: calcRem(40);
+        }
+
+        &.red {
+            background: linear-gradient(180deg, rgba(23, 28, 25, 0) 0%, rgba(206, 17, 39, 0.95) 80%);
+        }
+
+        &.green {
+            background: linear-gradient(180deg, rgba(23, 28, 25, 0) 0%, rgba(0, 122, 61, 0.95) 80%);
+        }
+
+        .card-title {
+            font-size: calcRem(16);
+            font-family: $font-b;
+            line-height: 26px;
+            margin-bottom: 0;
+            @include ellipse-rows(2);
+
+        }
+
+        .card-text {
+            font-size: calcRem(14);
+            color: $dark5;
+            @include ellipse-rows(1);
+        }
+
+        .card-details {
+            small {
+                font-size: calcRem(14);
+                color: $dark6;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  @extend %scroll;
+  // background: url(../images/01-Home.jpg);
+  // background-repeat: no-repeat;
+  // background-position: 0px -3873px;
+  @include mq('xxl') {
+    font-size: 18px;
+  }
+}
+
+html,
+body {
+  direction: $direction;
+  color: $black;
+  font-family: $font-r;
+  height: 100vh;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #F6FFFB;
+}
+
+// html {
+//   scroll-behavior: smooth;
+// }
+
+@include mq('xxl') {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1230px;
+  }
+}
+
+::selection {
+  background: $dark4;
+  color: #fff;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.link {
+  color: $dark;
+  text-decoration: none;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: $dark;
+    text-decoration: underline;
+  }
+}

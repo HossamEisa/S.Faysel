@@ -1,0 +1,66 @@
+.bio-section {
+    background: url(../images/bioBG.png) no-repeat center center/contain;
+    background-attachment: fixed;
+    padding-bottom: calcRem(50);
+    padding-top: 5px;
+
+    @include mq('xl') {
+        padding-bottom: calcRem(180);
+        background: url(../images/bioBG.png) no-repeat left/62%;
+        background-attachment: unset;
+
+    }
+
+
+
+ 
+
+    .desc {
+        p {
+            margin-bottom: calcRem(30);
+            line-height: calcRem(28);
+            font-size: calcRem(16);
+        }
+    }
+
+
+    .bio-exp-box {
+        width: 100%;
+        height: calcRem(160);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $white;
+        padding: calcRem(30);
+
+        @include mq('sm') {
+            height: calcRem(180);
+        }
+
+        .box-title {
+            font-size: calcRem(50);
+            font-family: $font-b;
+            line-height: 60px;
+
+            @include mq('sm') {
+                font-size: calcRem(64);
+                line-height: 100px;
+            }
+        }
+
+        .desc {
+            font-size: calcRem(16);
+            line-height: 28px;
+        }
+
+        &.main-color {
+            background-color: $main-color;
+        }
+
+        &.danger-color {
+            background-color: $invalid-color;
+        }
+    }
+}

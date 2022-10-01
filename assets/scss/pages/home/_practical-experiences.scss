@@ -1,0 +1,166 @@
+.practical-experiences {
+    background: url(../images/carouselBG.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: calcRem(60) 0;
+    overflow: hidden;
+    margin-bottom: calcRem(60);
+
+    @include mq('xl') {
+        margin-bottom: calcRem(180);
+        padding: calcRem(110) 0;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        bottom: 0;
+        background-color: rgba(23, 28, 25, 0.90);
+    }
+
+    >.container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .swiper-slide {
+        width: calcRem(275);
+        height: auto;
+
+        &:first-child {
+            width: calcRem(255);
+
+            .circle {
+                >.row {
+                    >div {
+                        &:first-child {
+                            opacity: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            .box {
+                margin-#{$left}: 0;
+            }
+        }
+    }
+
+    .practical-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: calcRem(20);
+            box-sizing: border-box;
+            margin: 0 calcRem(20);
+            $border: 4px;
+            background: #fff;
+            background-clip: padding-box;
+            /* !importanté */
+            border: solid $border transparent;
+            /* !importanté */
+            border-radius: 6px;
+            text-align: center;
+            flex: 1 1 auto;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                margin: -$border;
+                /* !importanté */
+                border-radius: inherit;
+                /* !importanté */
+                background: linear-gradient(to bottom, $invalid-color, $white);
+            }
+
+            .icon-circle {
+                width: calcRem(44);
+                height: calcRem(44);
+                background-color: $invalid-color;
+                border-radius: 50%;
+                color: $white;
+                font-size: calcRem(20);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            .content {
+                margin: calcRem(12) 0;
+                flex: 1 1 auto;
+                font-size: calcRem(14);
+                font-family: $font-b;
+                line-height: 24px;
+                padding-bottom: calcRem(15);
+            }
+
+            .date {
+                color: $invalid-color;
+                font-size: calcRem(12);
+                font-family: $font-b;
+            }
+        }
+
+        // Circle
+        .circle {
+            margin-top: calcRem(30);
+
+            .circle-item {
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                background-color: $invalid-color;
+                border: 3px solid $white;
+                margin: 0 calcRem(30);
+            }
+        }
+    }
+
+
+    .slider-controlls {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $main-color;
+        transition: 0.4s ease-in-out;
+
+        &:first-child {
+            margin-inline-end: calcRem(12);
+        }
+
+        &:hover {
+            background-color: $invalid-color;
+            color: $white;
+        }
+
+        &.swiper-button-disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+
+            &:hover {
+                background-color: $white;
+                color: $main-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+// // fonts gona here
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: toggleFont("Cairo-Regular", "ReadexPro-Regular");
+  src: toggleFont(url("../fonts/Cairo-Regular.ttf"), url("../fonts/ReadexPro-Regular.ttf"));
+}
+
+@font-face {
+  font-family: toggleFont("Cairo-Light", "ReadexPro-Light");
+  src: toggleFont(url("../fonts/Cairo-Light.ttf"), url("../fonts/ReadexPro-Light.ttf"));
+}
+
+@font-face {
+  font-family: toggleFont( "Cairo-Medium", "ReadexPro-Medium");
+  src: toggleFont(url("../fonts/Cairo-Medium.ttf"), url("../fonts/ReadexPro-Medium.ttf"));
+}
+
+@font-face {
+  font-family: toggleFont("Cairo-SemiBold", "ReadexPro-SemiBold");
+  src: toggleFont(url("../fonts/Cairo-SemiBold.ttf"), url("../fonts/ReadexPro-SemiBold.ttf"));
+}
+
+@font-face {
+  font-family: toggleFont( "Cairo-Bold", "ReadexPro-Bold");
+  src: toggleFont(url("../fonts/Cairo-Bold.ttf"), url("../fonts/ReadexPro-Bold.ttf"));
+}
