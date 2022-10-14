@@ -1,9 +1,11 @@
 .header {
     position: relative;
     z-index: 3;
+
     @include mq('lg') {
         padding-top: calcRem(24);
     }
+
     .navbar-brand {
         margin-inline-end: calcRem(53);
     }
@@ -26,9 +28,11 @@
             }
         }
     }
+
     .navbar-toggler {
         outline: none;
     }
+
     button:focus:not(:focus-visible) {
         border: none;
         outline: none;
@@ -73,5 +77,14 @@
                 }
             }
         }
+    }
+
+    &.inner {
+        background-color: #171C19;
+
+        @include mq('lg') {
+            padding-top: calcRem(0);
+        }
+
     }
 }

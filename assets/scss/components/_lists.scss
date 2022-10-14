@@ -10,14 +10,26 @@
 }
 
 .ul-bullets {
+
     list-style: disc;
-    padding-#{$left}: 15px;
+    padding-#{$right}: 15px;
+
+    &::before {
+        content: attr(aria-label);
+        display: block;
+        font-size: calcRem(14);
+        color: $main-color;
+        margin-#{$right}: -15px;
+        margin-bottom: calcRem(15);
+    }
 
     li {
-        font-size: calcRem(16);
+        font-size: calcRem(14);
+        line-height: 24px;
+        margin-bottom: 5px;
 
         a {
-            color: $white;
+            color: $dark2;
         }
 
         &:last-child {

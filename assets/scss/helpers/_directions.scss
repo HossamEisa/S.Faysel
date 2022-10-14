@@ -12,5 +12,5 @@ $direction: ltr !default;
 /**
  * Flips left for right, right for left
  */
-$left: flip(right, left);
-$right: flip(left, right);
+$left: flip(left, right);
+$right: flip(right, left);

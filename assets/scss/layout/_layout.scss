@@ -16,4 +16,8 @@
         position: relative;
         z-index: 1;
     }
+
+    .inner-content {
+        padding: calcRem(100) 0;
+    }
 }
