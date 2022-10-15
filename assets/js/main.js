@@ -105,3 +105,20 @@ var practicalCarousel = new Swiper(".practical-exp-carousel", {
 
 });
 
+
+
+// Copy Func
+
+function CopyToClipboard(id) {
+    var r = document.createRange();
+    r.selectNode(document.getElementById(id));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+    try {
+        // document.execCommand('copy');
+        navigator.clipboard.writeText(r);
+        window.getSelection().removeAllRanges();
+    } catch (err) {
+        // console.log('Unable to copy!');
+    }
+}

@@ -14,6 +14,7 @@
 :root {
   font-size: 16px;
   @extend %scroll;
+
   // background: url(../images/01-Home.jpg);
   // background-repeat: no-repeat;
   // background-position: 0px -3873px;
@@ -67,4 +68,9 @@ p {
     color: $dark;
     text-decoration: underline;
   }
+}
+
+hr {
+  border-color: $dark6;
+  opacity: 1;
 }
