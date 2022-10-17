@@ -6,35 +6,30 @@
 }
 
 .btn-primary {
-    background-color: $primary;
     position: relative;
-    color: $white;
-    border-color: $primary; 
-
-    &:hover {
-        background-color: #0a6dab;
-        border-color: #0a6dab;
-    }
-
-    &:not(:disabled):not(.disabled):active {
-        background-color: #0a6dab;
-        border-color: #0a6dab;
-    }
-
+    --bs-btn-bg: #007A3D;
+    --bs-btn-border-color: #007A3D;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #065e32;
+    --bs-btn-hover-border-color: #065e32;
+    --bs-btn-active-bg: #065e32;
+    --bs-btn-active-border-color: #065e32;
+    --bs-btn-disabled-bg: #007A3D;
+    --bs-btn-disabled-border-color: #007A3D;
 }
 
 .btn-outline-primary {
-    color: $primary;
-    border-color: $primary;
+    color: $main-color;
+    border-color: $main-color;
 
     &:hover {
-        background-color: #0a6dab;
-        border-color: #0a6dab;
+        background-color: #065e32;
+        border-color: #065e32;
     }
 
     &:not(:disabled):not(.disabled):active {
-        background-color: #0a6dab;
-        border-color: #0a6dab;
+        background-color: #065e32;
+        border-color: #065e32;
     }
 }
 
@@ -100,7 +95,7 @@
     --bs-btn-hover-color: #000;
     --bs-btn-hover-bg: #d3d4d5;
     --bs-btn-hover-border-color: #c6c7c8;
-    --bs-btn-focus-shadow-rgb: 211,212,213;
+    --bs-btn-focus-shadow-rgb: 211, 212, 213;
     --bs-btn-active-color: #000;
     --bs-btn-active-bg: #c6c7c8;
     --bs-btn-active-border-color: #babbbc;

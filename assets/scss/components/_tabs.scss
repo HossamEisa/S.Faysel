@@ -1,43 +1,30 @@
 .nav-tabs {
     border: none;
-    border-top: 1px solid #DEDEDE;
-    border-bottom: 1px solid #DEDEDE;
-    padding: 20px 0;
+    padding: 15px;
+    background-color: $white;
+    margin-bottom: calcRem(30);
+    border-radius: $border-radius;
 
     .nav-item {
         .nav-link {
             border: none;
-            color: #9A9DA3;
-            font-size: calcRem(14);
-            font-family: $font-m;
-            padding: 0.5rem 0.5rem;
+            color: $dark3;
+            padding: 20px;
             margin-bottom: 0;
             transition: 0.3s ease;
+            border-radius: 6px;
+            font-size: calcRem(14);
+            font-family: $font-sb;
+            line-height: 20px;
 
-            &:hover {
-                color: $dark;
+            @include mq('md') {
+                font-size: calcRem(16);
             }
 
-            @include mq('sm') {
-                padding: 0.5rem 1rem;
-            }
-
-            @include mq('lg') {
-                padding: 0.5rem calcRem(25);
-            }
-
-
+            &:hover,
             &.active {
-                color: #19202F;
-            }
-        }
-
-        &:first-child {
-            .nav-link {
-                @include mq('xl') {
-                    padding-#{$left}: 0;
-
-                }
+                color: $white;
+                background-color: $main-color;
             }
         }
     }

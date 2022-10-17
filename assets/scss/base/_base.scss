@@ -31,7 +31,7 @@ body {
   height: 100vh;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  background-color: #F6FFFB;
+  background-color: #F0F6F3;
 }
 
 // html {
@@ -39,7 +39,6 @@ body {
 // }
 
 @include mq('xxl') {
-
   .container,
   .container-lg,
   .container-md,

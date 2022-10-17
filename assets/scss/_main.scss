@@ -27,7 +27,6 @@
 @import 'base/base',
 'base/fonts',
 'base/typography',
-'base/color',
 'base/rest';
 
 ////////////////////////////////////////////////////////
@@ -48,3 +47,4 @@
 ////////////////////////////////////////////////////////
 @import "pages/home/all";
 @import "pages/news-details";
+@import "pages/contact";

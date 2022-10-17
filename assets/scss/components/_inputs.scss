@@ -1,0 +1,27 @@
+[type=email],
+[type=number],
+[type=tel],
+[type=url] {
+    direction: $direction;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-control {
+    border: 1px solid $dark6;
+    font-size: calcRem(14);
+    padding: 0.75rem;
+    border-radius: 10px;
+
+    &:focus {
+        border-color: $main-color;
+        box-shadow: 0 0 0 0.15rem rgb(0 122 61 / 34%);
+    }
+
+    &::placeholder {
+        color: $dark5;
+        font-size: 1em;
+    }
+}

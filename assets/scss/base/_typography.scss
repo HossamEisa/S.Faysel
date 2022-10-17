@@ -48,3 +48,22 @@
     font-family: $font-b;
     margin-bottom: calcRem(45);
 }
+
+.section-title-underline {
+    font-size: calcRem(24);
+    font-family: $font-b;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: calcRem(90);
+        height: 2px;
+        background-color: $main-color;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+    }
+}

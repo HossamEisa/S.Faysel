@@ -1,5 +1,5 @@
-label {
-    color: #55585D;
+label, .form-label {
+    color: $dark;
     font-size: calcRem(14);
     margin-bottom: 10px;
     display: block;
