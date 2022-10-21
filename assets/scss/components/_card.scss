@@ -141,3 +141,36 @@
     }
 
 }
+
+// about-program-box
+
+.about-program-box {
+    border: none;
+    filter: drop-shadow(0 10px 30px #0000000f);
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    border-radius: 6px;
+
+    .card-header {
+        padding: 20px;
+        background-color: $white;
+        border: none;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            border-radius: 6px;
+            height: 200px;
+        }
+    }
+
+    .card-body {
+        text-align: center;
+        font-size: calcRem(14);
+
+        .card-details {
+            color: $main-color;
+            font-family: $font-m;
+        }
+    }
+}
