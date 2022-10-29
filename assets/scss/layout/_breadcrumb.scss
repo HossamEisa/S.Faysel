@@ -42,6 +42,14 @@
                     font-weight: 900;
                     font-family: "Font Awesome 6 Free";
                     content: "\f104";
+
+                    @at-root {
+                        [dir="ltr"] & {
+                            transform: rotate(180deg);
+                            padding-right: inherit;
+                            padding-left: var(--bs-breadcrumb-item-padding-x);
+                        }
+                    }
                 }
             }
         }

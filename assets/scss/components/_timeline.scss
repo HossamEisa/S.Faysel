@@ -7,13 +7,19 @@
         position: absolute;
         top: 0;
         #{$left}: 50%;
-        background: $light-grey;
+        background: #ddd;
         background-repeat: repeat-y;
         background-size: 100%;
         width: 5px;
         height: 100%;
         transform: translateX(-50%);
         z-index: 2;
+
+        @at-root {
+            [dir="ltr"] & {
+                transform: translateX(50%);
+            }
+        }
     }
 
     .timeline-row {
@@ -58,10 +64,22 @@
                 border-radius: 50%;
                 border: 5px solid #F6FFFB;
 
+                @at-root {
+                    [dir="ltr"] & {
+                        transform: translateX(50%);
+                    }
+                }
+
                 @include mq('md') {
                     top: 25px;
                     #{$left}: -17px;
                     transform: translateX(0%);
+
+                    @at-root {
+                        [dir="ltr"] & {
+                            transform: translateX(0);
+                        }
+                    }
                 }
             }
 
@@ -118,6 +136,11 @@
                 font-size: calcRem(14);
                 display: inline-block;
                 margin: 0 5px;
+                @at-root {
+                    [dir="ltr"] & {
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
 
@@ -175,6 +198,7 @@
 .timeline-list {
     position: relative;
     --spaceGridItem: 5.8rem;
+
     &::after {
         content: " ";
         display: inline-block;
@@ -250,6 +274,11 @@
                 font-size: calcRem(14);
                 display: inline-block;
                 margin: 0 5px;
+                @at-root {
+                    [dir="ltr"] & {
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
 

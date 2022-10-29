@@ -46,7 +46,7 @@
             }
 
             .box {
-                margin-#{$left}: 0;
+                margin-#{$right}: 0;
             }
         }
     }
@@ -143,6 +143,12 @@
         justify-content: center;
         color: $main-color;
         transition: 0.4s ease-in-out;
+
+        @at-root {
+            [dir="ltr"] & {
+                transform: rotate(180deg);
+            }
+        }
 
         &:first-child {
             margin-inline-end: calcRem(12);
